@@ -504,3 +504,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const hash = location.hash.replace("#", "");
   navigate(views.includes(hash) ? hash : "home");
 });
+
+
+// ===== USL EXTENSIONS =====
+const USL_POLICE_ROLES = ["CPD","FBI","admin"];
+
+function canViewRegistry(user){
+ return user && USL_POLICE_ROLES.includes(user.role);
+}
+
+document.addEventListener("DOMContentLoaded",()=>{
+ const oldUpdate = window.updateAuthUI;
+ if(oldUpdate){
+   const orig=oldUpdate;
+   window.updateAuthUI=function(){
+     orig();
+     const u=currentUser();
+     const reg=document.getElementById("nav-registry");
+     const laws=document.getElementById("nav-laws");
+     if(reg) reg.classList.toggle("hidden", !canViewRegistry(u));
+     if(laws) laws.classList.remove("hidden");
+   }
+ }
+});

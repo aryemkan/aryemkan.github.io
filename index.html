@@ -30,8 +30,8 @@
       <nav class="nav" aria-label="Основная навигация">
         <button data-view="home">Главная</button>
         <button id="nav-profile" data-view="profile" class="hidden">Паспорт</button>
-        <button id="nav-registry" data-view="registry" class="hidden">Гос. реестр</button>
-        <button id="nav-admin" data-view="admin" class="admin-link hidden">Админ-панель</button>
+        <button id="nav-registry" data-view="registry" class="hidden">База данных</button>
+        <button id="nav-laws" data-view="laws" class="hidden">Законы</button><button id="nav-news" data-view="news">Новости</button><button id="nav-admin" data-view="admin" class="admin-link hidden">Админ-панель</button>
       </nav>
 
       <div class="topbar-right">
@@ -57,7 +57,7 @@
           </p>
           <div class="cta">
             <button class="btn primary" data-view="auth">Стать гражданином</button>
-            <button class="btn teal" data-view="registry">Гос. реестр</button>
+            <button class="btn teal" data-view="registry">База данных</button>
           </div>
         </div>
 
@@ -89,7 +89,7 @@
           </div>
           <div class="card">
             <h3><span class="icon">⚖</span> Закон и порядок</h3>
-            <p>Гос. реестр и MDT для полиции: поиск по гражданам, авто и собственности.</p>
+            <p>База данных и MDT для полиции: поиск по гражданам, авто и собственности.</p>
           </div>
           <div class="card">
             <h3><span class="icon">🏛</span> Власть</h3>
@@ -257,7 +257,11 @@
           </table>
         </div>
       </section>
-    </main>
+    
+<section id="view-laws" class="view hidden"><div class="card"><h2>Законы USL</h2><p>Раздел законов государства.</p></div></section>
+<section id="view-news" class="view hidden"><div class="card"><h2>Новости USL</h2><p>Официальные новости сервера.</p></div></section>
+</main>
+
 
     <footer>
       <p><strong>United States of Liberty (USL)</strong> — РП-проект в Minecraft.</p>
